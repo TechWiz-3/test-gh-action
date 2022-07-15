@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: TechWiz-3/test-gh-action@v0.0.2
+        uses: TechWiz-3/test-gh-action@v0.0.2  # hello?
         with:
           who-to-greet: 'Z the G'
       # Use the output from the `hello` step
