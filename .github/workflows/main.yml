@@ -3,6 +3,8 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     name: A job to say hello
     steps:
       - name: Hello world action step
