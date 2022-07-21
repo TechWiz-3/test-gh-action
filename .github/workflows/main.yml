@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Hello world action step
         id: hello
-        uses: TechWiz-3/test-gh-action@v2.1.0  # hello?
+        uses: TechWiz-3/test-gh-action@v2.3.0  # hello?
         with:
           who-to-greet: 'Z the G'
       # Use the output from the `hello` step
