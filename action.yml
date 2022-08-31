@@ -12,7 +12,14 @@ outputs:
   files:
     description: 'ls command'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+  using: 'composite'
+  steps:
+    - name: Run entrypoint
+      run: bash entrypoint.sh
+      shell: bash
+      args:
+        - ${{ inputs.who-to-greet }}
+    - name: Post run
+      if: always()
+      run: echo "post run hello world :D"
+      shell: bash
