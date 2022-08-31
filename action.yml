@@ -15,10 +15,8 @@ runs:
   using: 'composite'
   steps:
     - name: Run entrypoint
-      run: bash entrypoint.sh
+      run: bash entrypoint.sh ${{ inputs.who-to-greet }}
       shell: bash
-      args:
-        - ${{ inputs.who-to-greet }}
     - name: Post run
       if: always()
       run: echo "post run hello world :D"
